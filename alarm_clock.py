@@ -1,3 +1,4 @@
+from playsound import playsound
 import time
 
 def countdown(time_seconds):
@@ -10,8 +11,9 @@ def countdown(time_seconds):
         minutes = time_left // 60
         seconds = time_left % 60
 
-        print(f"{minutes}:{seconds}")
+        print(f"{minutes:02d}:{seconds:02d}")
 
     print("The alarm should ring now")
+    playsound("Funny_alarm.mp3")
 
 countdown(10)

@@ -18,6 +18,10 @@ def countdown(time_seconds):
         print(f"{CLEAR_AND_RETURN}{minutes:02d}:{seconds:02d}")
 
     print(f"{CLEAR_AND_RETURN}The alarm should ring now")
-    #playsound("Funny_alarm.mp3")
+    playsound("Funny_alarm.mp3")
 
-countdown(10)
+print("After how much time do you want to ring the alarm? ")
+minutes = int(input("Minutes: "))
+seconds = int(input("Seconds: "))
+total_time = minutes*60 + seconds
+countdown(total_time)
